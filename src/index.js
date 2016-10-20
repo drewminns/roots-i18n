@@ -93,11 +93,7 @@ function getI18n({translations, viewExtension, templatesGlob}) {
               // path: path.join('.', dir, `${name}.${lang}${ext}`),
               // extension: `${lang}${ext}`
 
-              path: lang === 'en' ?
-                // Put English in the root output
-                path.join('.', dir, `${name}${ext}`) :
-                // And other languages in their subdirectories
-                path.join('.', lang, dir, `${name}${ext}`),
+              path: path.join('.', lang, dir, `${name}${ext}`),
 
               // Old code, may be useful later:
               //
